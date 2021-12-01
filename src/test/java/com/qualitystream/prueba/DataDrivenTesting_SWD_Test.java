@@ -1,7 +1,5 @@
 package com.qualitystream.prueba;
 
-import java.io.IOException;
-
 import org.apache.poi.hpsf.Section;
 import org.junit.After;
 import org.junit.Before;
@@ -9,6 +7,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.io.IOException;
 
 public class DataDrivenTesting_SWD_Test {
 
@@ -22,7 +22,7 @@ public class DataDrivenTesting_SWD_Test {
 
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver.exe");
+		System.setProperty(Integer.parseInt("webdriver.chrome.driver"), "./src/test/resources/chromedriver/chromedriver.exe");
 		driver = new ChromeDriver();
 		writeFile = new WriteExcelFile();
 		readFile = new ReadExcelFile();
